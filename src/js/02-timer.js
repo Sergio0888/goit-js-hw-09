@@ -79,7 +79,16 @@ const timer = {
         }, 1000)
     },
     stop() {
+      Notiflix.Report.success(
+        'Упс...',
+        'Время закончилось',
+        'Обновить',
+        function cb() {
+          location.reload()
+        },
+      );
         clearInterval(this.intervalId);
+
       },
       addLeadingZero(value) {
         return String(value).padStart(2, '0');
