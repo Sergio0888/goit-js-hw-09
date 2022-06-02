@@ -45,9 +45,9 @@ const onSubmitForm = event => {
 
   for (let i = 1; i <= amount; i += 1) {
     
-    delay += stepDelay
-
     createPromise(i, delay)
+    
+    delay += stepDelay
   }
 }
 
